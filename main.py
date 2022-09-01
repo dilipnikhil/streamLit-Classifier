@@ -72,7 +72,7 @@ with input_data:
         prediction_output = (model_text.predict(vectoriser.transform([input_sentence])))
         prob = max((model_text.predict_proba(vectoriser.transform([input_sentence]))[0]))
     else:
-        predictions = " "
+        prediction_output = " "
         prob = " "
     displ_col_input.write(prediction_output)
     displ_col_input.text("The corresponding probabilty is:")
